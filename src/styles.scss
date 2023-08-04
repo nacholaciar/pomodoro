@@ -1,19 +1,106 @@
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-image: linear-gradient( rgb(139, 230, 233), #c4a8a4);
+:root,
+* {
+    box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+    font-family: 'Roboto', sans-serif;
+}
 
 .container {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
+    width: 600px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 15px rgba(0,0,0,0.1);
+    background: #ffffff;
 }
 
-button {
-  margin: 5px;
+#break-label,
+#session-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    color: #333;
+    margin: 15px 0;
+}
+
+#break-label button,
+#session-label button {
+    background: #e0e0e0;
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#break-label button:hover,
+#session-label button:hover {
+    background: #d6d6d6;
+}
+
+#break-label span,
+#session-label span {
+    margin: 0 15px;
+}
+
+#timer-label {
+    font-size: 1.5em;
+    color: #333;
+    margin: 15px 0;
+    text-align: center;
+}
+
+#time-left {
+    font-size: 2.5em;
+    color: #333;
+    margin: 15px 0;
+    text-align: center;
+}
+
+#start_stop {
+    background: #333;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#reset {
+    background: #999;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#start_stop:hover,
+#reset:hover {
+    background: #666;
+}
+
+@keyframes timer-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
 }
